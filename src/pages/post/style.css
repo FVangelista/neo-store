@@ -1,0 +1,90 @@
+@import "../../style/global.css";
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: calc(100vw - 15rem);
+  padding: 5rem;
+  min-height: 100vh;
+}
+
+.formTitle {
+  color: var(--clr-primary-7);
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 425px;
+}
+
+.input {
+  padding: 0.45rem;
+  width: 100%;
+  max-width: 325px;
+  border: 0.9px solid var(--clr-primary-6);
+  background-color: transparent;
+  color: var(--clr-primary-6);
+  outline: none;
+  resize: none;
+}
+
+.input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.textArea {
+  height: 120px;
+  overflow: scroll;
+}
+
+label {
+  color: var(--clr-primary-6);
+  letter-spacing: var(--spacing);
+}
+
+.subInput {
+  padding: 0.75rem 4.25rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border: none;
+  background-color: var(--clr-primary-6);
+  color: var(--clr-primary-5);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.subInput:hover {
+  background-color: var(--clr-primary-8);
+}
+
+.show {
+  display: flex;
+}
+
+.selection {
+  background: none;
+  color: var(--clr-primary-6);
+  border: none;
+  padding: 7.25px;
+  width: 150px;
+  border-bottom: 0.9px solid var(--clr-primary-6);
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  .mainSection {
+    width: 100vw;
+  }
+}

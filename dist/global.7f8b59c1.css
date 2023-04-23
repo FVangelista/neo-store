@@ -1,0 +1,196 @@
+/* variables */
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: #231f20;
+  --clr-primary-2: #1c191a;
+  --clr-primary-3: #151313;
+  --clr-primary-4: #0e0c0d;
+  --clr-primary-5: #070606;
+
+  /* light shades of primary color*/
+  --clr-primary-6: #e9e9e9;
+  --clr-primary-7: #d3d2d2;
+  --clr-primary-8: #a7a5a6;
+  --clr-primary-9: #7b7979;
+  --clr-primary-10: #4f4c4d;
+
+  /* other colors */
+
+  --clr-red: #ab1d1f;
+
+  /* for paragraphs */
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --ff-primary: "Lato", sans-serif;
+  --transition: all 0.35s linear;
+  --spacing: 0.09rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --smooth-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* default */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--clr-primary-4);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*  global classes */
+
+/* Navbar */
+
+.nav {
+  width: 15rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+  border-left: 0.9px solid var(--clr-primary-6);
+  z-index: 9;
+}
+
+.nav_logo {
+  color: var(--clr-primary-6);
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 1rem 2.5rem;
+}
+
+.nav_list-item {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--clr-primary-6);
+  letter-spacing: var(--spacing);
+}
+
+/* Footer */
+
+.footer {
+  width: calc(100vw - 15rem);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  border-left: 0.9px solid var(--clr-primary-6);
+  color: var(--clr-primary-6);
+  padding: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+  .nav {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row-reverse;
+    background-color: var(--clr-primary-5);
+    box-shadow: var(--smooth-shadow);
+    border: none;
+    z-index: 9;
+  }
+
+  .nav_list {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 1rem 2.5rem;
+  }
+
+  .footer {
+    width: 100vw;
+  }
+}
+
+/*# sourceMappingURL=global.7f8b59c1.css.map */

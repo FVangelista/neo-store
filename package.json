@@ -1,0 +1,40 @@
+{
+  "name": "neo-store",
+  "version": "1.0.0",
+  "description": "vanilla javascript concept store app",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "export NODE_ENV=development && webpack serve",
+    "deploy": "npm run build"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Filippo Vangelista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FVangelista/neo-store/issues"
+  },
+  "homepage": "https://github.com/FVangelista/neo-store#readme",
+  "dependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "css-loader": "^6.7.3",
+    "dotenv-webpack": "^8.0.1",
+    "html-bundler-webpack-plugin": "^1.15.0",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
+  },
+  "devDependencies": {
+    "mini-css-extract-plugin": "^2.7.5",
+    "process": "^0.11.10"
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../style/global.css";
+
+.mainSection {
+  position: relative;
+  width: calc(100vw - 15rem);
+  padding: 5rem;
+  min-height: 100vh;
+}
+
+.cartWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 500px;
+  padding: 40px;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  color: var(--clr-primary-6);
+}
+
+.cartImg {
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 200px;
+  min-height: 200px;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.btnCart {
+  text-transform: uppercase;
+  background: var(--clr-primary-8);
+  color: var(--clr-white);
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0.375rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btnRem {
+  color: var(--clr-red);
+}
+
+.total {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15rem;
+  padding: 20px;
+  width: fit-content;
+  color: var(--clr-red);
+  margin: 40px auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .cartItem {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cartTitle {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .mainSection {
+    width: 100vw;
+  }
+  .total {
+    top: auto;
+    right: 2rem;
+    bottom: 10rem;
+  }
+}
