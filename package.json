@@ -1,8 +1,8 @@
 {
   "name": "neo-store",
-  "version": "1.0.0",
   "description": "vanilla javascript concept store app",
   "main": "./src/app.js",
+  "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
@@ -13,7 +13,7 @@
     "type": "git"
   },
   "author": "Filippo Vangelista",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/FVangelista/neo-store/issues"
   },
