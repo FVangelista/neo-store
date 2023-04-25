@@ -144,7 +144,6 @@ p {
 }
 
 .nav_list-item {
-  text-transform: capitalize;
   font-weight: 500;
   color: var(--clr-primary-6);
   letter-spacing: var(--spacing);
@@ -162,9 +161,11 @@ p {
 }
 
 .footer-logo {
-  border-left: 0.9px solid var(--clr-primary-6);
+  border-left: 0.75px solid var(--clr-primary-6);
+  letter-spacing: var(--spacing);
   color: var(--clr-primary-6);
   padding: 20px;
+  font-weight: lighter;
 }
 
 @media screen and (max-width: 1080px) {

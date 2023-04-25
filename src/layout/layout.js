@@ -17,7 +17,7 @@ export function createNavbar() {
       ? 0
       : JSON.parse(localStorage.getItem("cartList")).length;
 
-  const menuItems = [`cart (${cartListLength})`, "home", "post"];
+  const menuItems = ["Home", "Post", `Cart (${cartListLength})`];
   menuItems.forEach((item) => {
     const li = cEl("li");
     const a = cEl("a");
@@ -28,9 +28,9 @@ export function createNavbar() {
     ul.appendChild(li);
     li.appendChild(a);
   });
-  ul.children[0].firstChild.href = "/neo-store/cart.html";
-  ul.children[1].firstChild.href = "/neo-store/";
-  ul.children[2].firstChild.href = "/neo-store/post.html";
+  ul.children[0].firstChild.href = "/";
+  ul.children[1].firstChild.href = "/post.html";
+  ul.children[2].firstChild.href = "/cart.html";
 
   bodyEl.appendChild(nav);
   nav.appendChild(logo);
@@ -42,12 +42,17 @@ export function createFooter() {
   footer.classList.add("footer");
   const ul = cEl("ul");
   ul.classList.add("nav_list");
-  const logo = cEl("h4");
+  const logo = cEl("span");
   logo.classList.add("footer-logo");
 
-  logo.innerHTML = "&copy; vanilla .js";
+  logo.innerHTML = "Vanilla.js &copy; by filippo";
 
-  const menuItems = ["cart", "home", "post"];
+  const cartListLength =
+    JSON.parse(localStorage.getItem("cartList")) === null
+      ? 0
+      : JSON.parse(localStorage.getItem("cartList")).length;
+
+  const menuItems = ["Home", "Post", `Cart (${cartListLength})`];
   menuItems.forEach((item) => {
     const li = cEl("li");
     const a = cEl("a");
@@ -58,9 +63,9 @@ export function createFooter() {
     ul.appendChild(li);
     li.appendChild(a);
   });
-  ul.children[0].firstChild.href = "/neo-store/cart.html";
-  ul.children[1].firstChild.href = "/neo-store/";
-  ul.children[2].firstChild.href = "/neo-store/post.html";
+  ul.children[0].firstChild.href = "/";
+  ul.children[1].firstChild.href = "/post.html";
+  ul.children[2].firstChild.href = "/cart.html";
 
   bodyEl.appendChild(footer);
   footer.appendChild(ul);

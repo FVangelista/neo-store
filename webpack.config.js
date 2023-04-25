@@ -8,7 +8,7 @@ module.exports = {
   mode: isDev ? "development" : "production",
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/neo-store/",
+    publicPath: "/",
   },
 
   devtool: "eval-source-map",
@@ -30,7 +30,7 @@ module.exports = {
       },
     },
     hot: true,
-    open: "/neo-store/",
+    open: "/",
     compress: true,
   },
 
@@ -50,4 +50,6 @@ module.exports = {
     }),
     new Dotenv(),
   ],
+
+  performance: { hints: false },
 };
