@@ -9,7 +9,7 @@ export const createPostForm = (mainSection) => {
 
   const formTitle = cEl("h3");
   formTitle.classList.add("formTitle");
-  formTitle.textContent = "Post Form";
+  formTitle.textContent = "Post a product";
 
   const inputTitle = cEl("input");
   inputTitle.classList.add("input");

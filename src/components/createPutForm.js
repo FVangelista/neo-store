@@ -10,6 +10,14 @@ export const createPutForm = (mainSection) => {
   formTitle.classList.add("formTitle");
   formTitle.textContent = "Put Form";
 
+  const inputId = cEl("input");
+  inputId.classList.add("input");
+  inputId.id = "itemId";
+  inputId.type = "number";
+  const labelId = cEl("label");
+  labelId.setAttribute("for", "itemId");
+  labelId.textContent = "ID:";
+
   const inputTitle = cEl("input");
   inputTitle.classList.add("input");
   inputTitle.id = "title";
@@ -58,6 +66,8 @@ export const createPutForm = (mainSection) => {
 
   mainSection.appendChild(putForm);
   putForm.appendChild(formTitle);
+  putForm.appendChild(labelId);
+  putForm.appendChild(inputId);
   putForm.appendChild(labelTitle);
   putForm.appendChild(inputTitle);
   putForm.appendChild(labelPrice);

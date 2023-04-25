@@ -44,8 +44,13 @@ export function createFooter() {
   ul.classList.add("nav_list");
   const logo = cEl("span");
   logo.classList.add("footer-logo");
+  const linkGithub = cEl("a");
+  linkGithub.classList.add("link");
 
-  logo.innerHTML = "Vanilla.js &copy; by filippo";
+  linkGithub.textContent = "filippo";
+  linkGithub.setAttribute("href", "https://github.com/FVangelista");
+
+  logo.innerHTML = "Vanilla.js &copy; by ";
 
   const cartListLength =
     JSON.parse(localStorage.getItem("cartList")) === null
@@ -70,4 +75,5 @@ export function createFooter() {
   bodyEl.appendChild(footer);
   footer.appendChild(ul);
   footer.appendChild(logo);
+  logo.appendChild(linkGithub);
 }

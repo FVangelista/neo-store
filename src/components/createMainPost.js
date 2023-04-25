@@ -47,25 +47,39 @@ export default function createMainPost(bodyEl) {
     };
 
     POST(schema, "products", "POST");
+
+    e.target[0].value = "";
+    e.target[1].value = "";
+    e.target[2].value = "";
+    e.target[3].value = "";
+    e.target[4].value = "";
   });
 
   putForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const schema = {
-      title: e.target[0].value,
-      price: parseInt(e.target[1].value),
-      description: e.target[4].value,
-      categoryId: parseInt(e.target[2].value),
-      images: [e.target[3].value],
+      title: e.target[1].value,
+      price: parseInt(e.target[2].value),
+      description: e.target[5].value,
+      categoryId: parseInt(e.target[3].value),
+      images: [e.target[4].value],
     };
 
-    PUT(schema, "products", "PUT", 207);
+    PUT(schema, "products", "PUT", e.target[0].value);
+
+    e.target[0].value = "";
+    e.target[1].value = "";
+    e.target[2].value = "";
+    e.target[3].value = "";
+    e.target[4].value = "";
+    e.target[5].value = "";
   });
 
   delForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     DELETE("products", "DELETE", parseInt(e.target[0].value));
+    e.target[0].value = "";
   });
 }
