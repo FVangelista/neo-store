@@ -41,8 +41,8 @@ export const displayCartItem = (cartWrapper, data, total) => {
     localStorage.setItem("cartList", JSON.stringify(filteredData));
     cartItem.remove();
 
-    const cartLink = gEl(".nav_list-item");
-    cartLink.textContent = `cart (${filteredData.length})`;
+    const cartLink = document.querySelectorAll(".nav_list-item")[2];
+    cartLink.textContent = `Cart (${filteredData.length})`;
     total.textContent = `$ ${calcTotal(filteredData)}.00`;
   });
 

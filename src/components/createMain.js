@@ -131,8 +131,8 @@ export default function createMain(bodyEl) {
 
       window.localStorage.setItem("cartList", JSON.stringify(cartList));
       console.log(cartListFiltering);
-      const cartLink = gEl(".nav_list-item");
-      cartLink.textContent = `cart (${count})`;
+      const cartLink = document.querySelectorAll(".nav_list-item")[2];
+      cartLink.textContent = `Cart (${count})`;
     });
 
     infoPrice.textContent = `$ ${price}`;
